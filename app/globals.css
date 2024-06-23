@@ -2,32 +2,116 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fff;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #46A358;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: green;
+}
+
+.container {
+  max-width: 1210px;
+  margin: 0 auto;
+}
+
+.search-plant{
+  background-image: url("../public/search-icon.svg");
+  background-repeat: no-repeat;
+  background-size: 22px;
+  background-position: 11px center;
+}
+.ant-slider-track {
+  background-color: #46A358 !important;
+}
+.ant-slider-handle::after, .ant-slider-handle::before{
+  background-color: #46A358 !important;
+  border-radius: 50% !important;
+  box-shadow: 0 0 0 4px #46A358 !important;
+}
+.Summer__wrapper{
+  position: relative;
+}
+.Summer__wrapper::before{
+  content: "";
+  position: absolute;
+  top: -50px;
+  right: 0;
+  bottom: 0;
+  left: -10px;
+  background-image: url("../public/bacImg1.png");
+  background-repeat: no-repeat;
+  background-size: 300px;
+}
+.Summer__wrapper::after{
+  content: "";
+  position: absolute;
+  top: 137px;
+  right: 0;
+  bottom: 0;
+  left: 0px;
+  background-image: url("../public/line.svg");
+  background-repeat: no-repeat;
+}
+.wrapper__inner{
+  position: relative;
+}
+.wrapper__inner::before{
+  content: "";
+  position: absolute;
+  top: -50px;
+  right: 0;
+  bottom: 0;
+  left: 0px;
+  background-image: url("../public/bacImg2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.wrapper__inner::after{
+  content: "";
+  position: absolute;
+  top: 137px;
+  right: 0;
+  bottom: 0;
+  left: 0px;
+  background-image: url("../public/line.svg");
+  background-repeat: no-repeat;
+}
+
+.ant-pagination-item{
+  border-color: #E5E5E5 !important;
+}
+.ant-pagination-item-active{
+  background-color: #46A358 !important;
+  border-color: #46A358 !important;
+  color: #fff !important;
+}
+
+.ant-pagination-item-active > a{
+  color: #fff !important;
+}
+
+.flowers__wrap:hover > .flowers__icons {
+  bottom: 0;
+}
+.Shop__size{
+  transition: all 0.3s linear;
+  
+}
+.Shop__size:hover{
+  cursor: pointer;
+  color: #46A358 !important;
+  border-color: #46A358 !important;
 }

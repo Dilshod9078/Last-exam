@@ -1,0 +1,40 @@
+
+  
+  .swiper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    padding-left: 40px;
+    background: #F5F5F580;
+    display: flex;
+    background-image: url('../../public/hero-img.png');
+    background-repeat: no-repeat;
+    background-size: 518px ;
+    background-position: right center;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .swiper-pagination-bullet-active-main{
+    background-color: #46A358 !important;
+  }
+
+  .hero-mobile{
+    padding-left: 23px;
+    background-image: url("../../public/mobile-bg.png"), url("../../public/flowers-mobile.png");
+    background-repeat: no-repeat;
+    border-radius: 30px;
+    background-size: 120%, 170px;
+    background-position: center,right center;
+    background-color: transparent;
+  }
