@@ -74,6 +74,10 @@ const OrderProduct: React.FC = () => {
         );
       };
 
+   const handleOrderStore = () => {
+    const orderStore = arrayBasket
+    const basketArr = window.localStorage.setItem("basketArr", JSON.stringify(orderStore))
+   }
 
   return (
     <div className="container">
@@ -143,7 +147,7 @@ const OrderProduct: React.FC = () => {
                         </li>
                         <li className='flex justify-between'>
                             <p className='font-normal text-[15px] leading-[16px] text-[#3D3D3D] mb-[8px]'>Coupon Discount</p>
-                            <p className='font-normal text-[15px] leading-[16px] text-[#3D3D3D]'>- ${DiscountTotal}</p>
+                            <p className='font-normal text-[15px] leading-[16px] text-[#3D3D3D]'>- ${result}</p>
                         </li>
                         <li className='flex justify-between'>
                             <p className='font-normal text-[15px] leading-[16px] text-[#3D3D3D] mb-[8px]'>Shipping</p>
@@ -157,7 +161,7 @@ const OrderProduct: React.FC = () => {
                     </ul>
                     <div className='flex flex-col mt-[30px]'>
                         <Link href={`/shop/chekout`}>
-                            <Button buttonWidth={332} padB={12} padT={12} btnBg={false} title='Proceed to checkout' />
+                            <Button onclick={handleOrderStore} buttonWidth={332} padB={12} padT={12} btnBg={false} title='Proceed to checkout' />
                         </Link>
                         <Button buttonWidth={332} padT={12} padB={12} btnBg={true} title='Continue Shopping' />
                     </div>

@@ -10,8 +10,9 @@ const layout = ({children}:any) => {
           <div className='flex items-center space-x-[5px] mb-[43px] pt-[36px]'>
         <Link className='text-[15px] text-[#3D3D3D] duration-300 hover:font-bold hover:text-[#46A358] leading-[16px]' href={'/'}>Home</Link>
         <span>/</span>
-         <button className={`text-[15px] text-[#3D3D3D] duration-300 ${pathname.includes("/order") ? "font-normal hover:font-bold" : "font-bold"} hover:text-[#46A358] leading-[16px]`}>Shop</button>
-         <button className='text-[15px] text-[#3D3D3D] duration-300 font-bold hover:text-[#46A358] leading-[16px]'>{pathname.includes("order") ? "/ Shopping cart" :""}</button>
+         <button className={`text-[15px] text-[#3D3D3D] duration-300 ${pathname.includes("/order")|| pathname.includes("/chekout") ? "font-normal hover:font-bold" : "font-bold"} hover:text-[#46A358] leading-[16px]`}>Shop</button>
+         <button className={`text-[15px] text-[#3D3D3D] duration-300 ${pathname.includes("/order") ? "font-bold hover:font-bold" : "font-normal"} hover:text-[#46A358] leading-[16px]`}>{pathname.includes("order") ? "/ Shopping cart" :""}</button>
+         <button className={`text-[15px] text-[#3D3D3D] duration-300 ${pathname.includes("/chekout") ? "font-bold" : "font-bold"} hover:text-[#46A358] leading-[16px]`}>{pathname.includes("chekout") ? "/ Checkout" :""}</button>
       </div>
         {children}
     </div>
